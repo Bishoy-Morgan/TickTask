@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../public/Images/hassaan-here-VPGjoxRXPY0-unsplash.jpg);
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container-A {
+  width: 40%;
+  height: 85%;
+  padding: 12px;
+}
+
+.container-A h2 {
+  color: ivory;
+  font-size: 60px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.container-A h5 {
+  color:#412176;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.container-A h5 span {
+  color: ivory;
+}
+
+.container-B {
+  width: 35%;
+  height: 85%;
+  min-height: 300px;
+  max-height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  backdrop-filter: blur(20px);
+  padding: 2%;
+  border-radius: 5px;
+  -webkit-box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+  -moz-box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+  box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+}
+
+.container-B::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container-B::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: #412176;
+  border-radius: 2px; 
+}
+
+.container-B::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.header {
+  width: 100%;
+  height: 15%;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #412176;
+}
+
+.header-contanier {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: x-large;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #cc7ed1;
+  color: ivory;
+  border: 0;
+  padding: 10px 30px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  background-color: #412176;
+}
+
+.alert-msg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding:  10%;
+  text-align: center;
+  color: ivory;
+  letter-spacing: 2px;
+  line-height: 40px;
+  background-color: rgba(65, 33, 118,.97);
+  z-index: 100;
+  transform: scale(.9);
+  animation: alert-change .2s forwards ease-out;
+}
+
+@keyframes alert-change {
+  0%{
+    opacity: .5;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.task-container {
+  width: 95%;
+  margin: auto;
+}
+
+.task {
+  position: relative;
+  background: whitesmoke;
+  margin: 10px 0px;
+  padding: 5px 15px;
+  cursor: pointer;
+  -webkit-box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+  -moz-box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+  box-shadow: -11px 14px 33px 2px rgba(65,33,118,1);
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task.reminder {
+  border-left: 8px solid #412176; 
+}
+
+.task h3 {
+  font-size: 18px;
+  color: #412176;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no-tasks {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: ivory;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+.close-icon {
+  color: #412176;
+}
+
+.close-icon:hover {
+  color: #cc7ed1;
+}
+
+.task p {
+  margin-left: 8px;
+  color: #cc7ed1;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.add-form {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control {
+  position: relative;
+  width: 100%;
+}
+
+.form-control label {
+  color: ivory;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: whitesmoke;
+  outline: none;
+  border: 0;
+  color: #412176;
+  letter-spacing: 1px;
+  -webkit-box-shadow: -5px 8px 15px 0px rgba(65,33,118,1);
+  -moz-box-shadow: -5px 8px 15px 0px rgba(65,33,118,1);
+  box-shadow: -5px 8px 15px 0px rgba(65,33,118,1);
+}
+
+.form-control input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+  font-family:cursive;
+  color:#cc7ed1;
+}
+
+.task-icon {
+  position: absolute;
+  bottom: 12%;
+  right: 4%;
+  color: #cc7ed1;
+  font-size: 22px;
+}
+
+.form-control-check {
+  width: 50%;
+  height: 12%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form-control-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 1.6rem;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  font-size: 2rem;
+  padding: 0.1rem;
+  background-color: ivory;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  background-color: #412176;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+footer {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #281447;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .container-A {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .container-B {
+    width: 80%;
+    min-height: 500px;
+    margin-bottom: 80px;
+    padding: 5%;
+  }
+
+  .header-contanier {
+    width: 50%;
+    justify-content: start;
+  }
+
+  .header-icon {
+    margin-right: 15px;
+  }
+  
+  .form-control {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    width: 70%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+  }
+
+  .container-A {
+    width: 45%;
+  }
+  .container-B {
+    width: 35%;
+    min-height: 500px;
+    padding: 2%;
+  }
+
+  .header-contanier {
+    width: 50%;
+  }
+}
